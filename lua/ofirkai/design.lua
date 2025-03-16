@@ -138,6 +138,9 @@ M.hl_groups = function(scheme)
 		Search = {
 			bg = scheme.search_bg,
 		},
+		CurSearch = {
+			link = 'Search',
+		},
 		IncSearch = {
 			fg = scheme.inc_search_fg,
 			bg = scheme.inc_search_bg,
@@ -725,6 +728,22 @@ M.hl_groups = function(scheme)
 		DiagnosticError = {
 			link = 'DiagnosticVirtualTextError',
 		},
+		CursorDiagnosticFloatingError = {
+			fg = scheme.red,
+			bg = scheme.cursor_line_bg,
+		},
+		CursorDiagnosticFloatingWarn = {
+			fg = scheme.yellow,
+			bg = scheme.cursor_line_bg,
+		},
+		CursorDiagnosticFloatingInfo = {
+			fg = scheme.white,
+			bg = scheme.cursor_line_bg,
+		},
+		CursorDiagnosticFloatingHint = {
+			fg = scheme.aqua,
+			bg = scheme.cursor_line_bg,
+		},
 		CursorWord0 = {
 			bg = scheme.white,
 			fg = scheme.black,
@@ -1191,6 +1210,14 @@ M.hl_groups = function(scheme)
 		TroubleCode = {
 			-- Description
 			fg = scheme.dimmed_aqua,
+		},
+		-- aklt/plantuml-syntax
+		plantumlColonLine = {
+			link = '@constant.builtin',
+		},
+		-- chentoast/marks.nvim
+		MarkSignHL = {
+			fg = scheme.teal,
 		},
 	}
 end
