@@ -72,6 +72,9 @@ M.setup = function(config)
 	-- Merge scheme from theme to default scheme
 	if theme then
 		default_config.scheme = vim.tbl_deep_extend('keep', theme.scheme, default_config.scheme)
+		if config.debug then
+			  print(vim.inspect(default_config.scheme))
+		end
 	end
 
 	-- Merge use config (includes scheme)
@@ -90,6 +93,9 @@ M.setup = function(config)
 	local hl_groups = design.hl_groups(M.scheme)
 	if theme then
 		hl_groups = vim.tbl_deep_extend('keep', theme.hl_groups(M.scheme), hl_groups)
+		if config.debug then
+			  print(vim.inspect(hl_groups))
+		end
 	end
 	hl_groups = vim.tbl_deep_extend('keep', config.custom_hlgroups, hl_groups)
 
